@@ -75,7 +75,7 @@ GM_config.init({
         const source = GM_config.get("reblogSource", true);
         if (source) {
           const sound = new Howl({
-            src: sorce,
+            src: source,
             volume: GM_config.get("reblogVolume", true)
           });
           sound.play();
@@ -105,7 +105,7 @@ GM_config.init({
         const source = GM_config.get("replySource", true);
         if (source) {
           const sound = new Howl({
-            src: sorce,
+            src: source,
             volume: GM_config.get("replyVolume", true)
           });
           sound.play();
@@ -135,7 +135,7 @@ GM_config.init({
         const source = GM_config.get("privateSource", true);
         if (source) {
           const sound = new Howl({
-            src: sorce,
+            src: source,
             volume: GM_config.get("privateVolume", true)
           });
           sound.play();
@@ -165,7 +165,7 @@ GM_config.init({
         const source = GM_config.get("directSource", true);
         if (source) {
           const sound = new Howl({
-            src: sorce,
+            src: source,
             volume: GM_config.get("directVolume", true)
           });
           sound.play();
@@ -195,7 +195,7 @@ GM_config.init({
         const source = GM_config.get("deletedSource", true);
         if (source) {
           const sound = new Howl({
-            src: sorce,
+            src: source,
             volume: GM_config.get("deletedVolume", true)
           });
           sound.play();
@@ -225,7 +225,7 @@ GM_config.init({
         const source = GM_config.get("followSource", true);
         if (source) {
           const sound = new Howl({
-            src: sorce,
+            src: source,
             volume: GM_config.get("followVolume", true)
           });
           sound.play();
