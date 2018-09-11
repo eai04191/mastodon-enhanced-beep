@@ -3,7 +3,7 @@
 
 Enhanced Beep!
 ===
-![Install directly as Userscript](https://img.shields.io/badge/Install%20directly%20as-Userscript-brightgreen.svg?longCache=true&style=flat-square)
+[![Install directly as Userscript](https://img.shields.io/badge/Install%20directly%20as-Userscript-brightgreen.svg?longCache=true&style=flat-square)](https://github.com/eai04191/mastodon-enhanced-beep/raw/master/enhanced-beep.user.js)
 
 
 ## Feature
