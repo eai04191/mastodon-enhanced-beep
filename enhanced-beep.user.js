@@ -16,7 +16,6 @@
 // @require      https://cdn.rawgit.com/arantius/3123124/raw/1866c6780e1946f657f688537b199e0102ccd19c/grant-none-shim.js
 // @require      https://openuserjs.org/src/libs/sizzle/GM_config.js
 
-// @resource     config_css file:///C:/Users/Eai/Documents/git/mastodon-enhanced-beep/config.custom.css
 // @resource     config_css https://raw.githubusercontent.com/eai04191/mastodon-enhanced-beep/master/config.custom.css
 
 // @grant        GM_getResourceText
