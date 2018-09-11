@@ -42,11 +42,14 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const sound = new Howl({
-          src: GM_config.get("favouriteSource", true),
-          volume: GM_config.get("favouriteVolume", true)
-        });
-        sound.play();
+        const source = GM_config.get("favouriteSource", true);
+        if (source) {
+          const sound = new Howl({
+            src: source,
+            volume: GM_config.get("favouriteVolume", true)
+          });
+          sound.play();
+        }
       }
     },
     favouriteMemo: {
@@ -69,11 +72,14 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const sound = new Howl({
-          src: GM_config.get("reblogSource", true),
-          volume: GM_config.get("reblogVolume", true)
-        });
-        sound.play();
+        const source = GM_config.get("reblogSource", true);
+        if (source) {
+          const sound = new Howl({
+            src: sorce,
+            volume: GM_config.get("reblogVolume", true)
+          });
+          sound.play();
+        }
       }
     },
     reblogMemo: {
@@ -96,11 +102,14 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const sound = new Howl({
-          src: GM_config.get("replySource", true),
-          volume: GM_config.get("replyVolume", true)
-        });
-        sound.play();
+        const source = GM_config.get("replySource", true);
+        if (source) {
+          const sound = new Howl({
+            src: sorce,
+            volume: GM_config.get("replyVolume", true)
+          });
+          sound.play();
+        }
       }
     },
     replyMemo: {
@@ -123,11 +132,14 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const sound = new Howl({
-          src: GM_config.get("privateSource", true),
-          volume: GM_config.get("privateVolume", true)
-        });
-        sound.play();
+        const source = GM_config.get("privateSource", true);
+        if (source) {
+          const sound = new Howl({
+            src: sorce,
+            volume: GM_config.get("privateVolume", true)
+          });
+          sound.play();
+        }
       }
     },
     privateMemo: {
@@ -150,11 +162,14 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const sound = new Howl({
-          src: GM_config.get("directSource", true),
-          volume: GM_config.get("directVolume", true)
-        });
-        sound.play();
+        const source = GM_config.get("directSource", true);
+        if (source) {
+          const sound = new Howl({
+            src: sorce,
+            volume: GM_config.get("directVolume", true)
+          });
+          sound.play();
+        }
       }
     },
     directMemo: {
@@ -177,11 +192,14 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const sound = new Howl({
-          src: GM_config.get("deletedSource", true),
-          volume: GM_config.get("deletedVolume", true)
-        });
-        sound.play();
+        const source = GM_config.get("deletedSource", true);
+        if (source) {
+          const sound = new Howl({
+            src: sorce,
+            volume: GM_config.get("deletedVolume", true)
+          });
+          sound.play();
+        }
       }
     },
     deletedMemo: {
@@ -204,11 +222,14 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const sound = new Howl({
-          src: GM_config.get("followSource", true),
-          volume: GM_config.get("followVolume", true)
-        });
-        sound.play();
+        const source = GM_config.get("followSource", true);
+        if (source) {
+          const sound = new Howl({
+            src: sorce,
+            volume: GM_config.get("followVolume", true)
+          });
+          sound.play();
+        }
       }
     },
     followMemo: {
