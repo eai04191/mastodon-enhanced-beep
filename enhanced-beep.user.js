@@ -16,7 +16,10 @@
 // @require      https://cdn.rawgit.com/arantius/3123124/raw/1866c6780e1946f657f688537b199e0102ccd19c/grant-none-shim.js
 // @require      https://openuserjs.org/src/libs/sizzle/GM_config.js
 
-// @grant        none
+// @resource     config_css file:///C:/Users/Eai/Documents/git/mastodon-enhanced-beep/config.custom.css
+// @resource     config_css https://raw.githubusercontent.com/eai04191/mastodon-enhanced-beep/master/config.custom.css
+
+// @grant        GM_getResourceText
 // ==/UserScript==
 
 "use strict";
@@ -218,135 +221,7 @@ GM_config.init({
       location.reload();
     }
   },
-  css: `
-#eb {
-  max-width: 1000px;
-  padding: 20px 80px;
-  margin: auto;
-}
-#eb #eb_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-#eb #eb_header{
-  width: 100%;
-  min-height: 115px;
-  margin: 0 auto 10px;
-  content: url(https://cldup.com/9iCOVswnCZ.svg);
-}
-#eb .section_header_holder {
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 400px;
-  width: 50%;
-  margin: 0;
-  padding: 16px 4px;
-  box-sizing: border-box;
-}
-#eb .section_header {
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background: #292F33;
-  margin-bottom: 20px;
-}
-
-#eb .config_var {
-  position: relative;
-  width: 100%;
-  margin: 13px 0 10px 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-#eb .config_var[id$="Volume_var"] {
-  width: 75%;
-}
-#eb .config_var[id$="Button_var"] {
-  width: 25%;
-}
-
-#eb .config_var label {
-  position: absolute;
-  top: 9px;
-  left: 0;
-  margin: 0;
-  font-weight: lighter;
-  font-size: 16px;
-  color: #9098a9;
-  transform-origin: 0 0;
-  transition: all 0.2s ease;
-  
-}
-#eb input[type="text"]:not(:placeholder-shown) + label {
-  color: #5a667f;
-  transform: translateY(-20px) scale(0.75);
-}
-#eb input[type="text"]:focus + label {
-  color: #07f;
-  transform: translateY(-22px) scale(0.75);
-}
-
-#eb input[type="text"] {
-  width: 100%;
-  border: 0;
-  padding: 12px 0;
-  height: 36px;
-  border-bottom: 1px solid #c8ccd4;
-  background: none;
-  transition: all 0.15s ease;
-}
-#eb input[type="text"]:focus {
-  background: none;
-  outline: none;
-}
-
-#eb input[type="button"] {
-  width: 80%;
-  height: 36px;
-  background-color: transparent;
-  border: 1px solid #c8ccd4;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-}
-
-
-#eb #eb_buttons_holder {
-  margin: 20px auto;
-}
-#eb .saveclose_buttons {
-  margin: 0;
-  padding: 6px 24px;
-  position: relative;
-  width: 50vw;
-  height: 40px;
-  visibility: hidden;
-}
-#eb .saveclose_buttons:after {
-  content: "💾 Save & Reload";
-  visibility: visible;
-  display: block;
-  border: 1px solid #292f33;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 200px;
-  margin: auto;
-  padding: 8px;
-}
-
-#eb_closeBtn,
-.reset_holder {
-  display: none !important;
-}`
+  css: GM_getResourceText("config_css")
 });
 
 window.addEventListener(
@@ -356,7 +231,7 @@ window.addEventListener(
     document.getElementById(
       "enhanced-beep-config"
     ).onclick = eventHandlerOpenConfig;
-
+    console.log(GM_getResourceText("config_css"));
     // const showLog = GM_config.get("showLog");
     const showLog = false;
 
