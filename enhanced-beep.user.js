@@ -178,7 +178,7 @@ GM_config.init({
       default: null
     },
     deletedSource: {
-      section: "Deleted",
+      section: "Notification Deleted",
       label: "Sound Source URL",
       type: "text",
       default: ""
