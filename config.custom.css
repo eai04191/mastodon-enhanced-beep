@@ -33,6 +33,37 @@
   background: #292f33;
   margin-bottom: 20px;
 }
+#eb .section_header:before {
+  display: inline-block;
+  margin-right: 5px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#eb .section_header#eb_section_header_0:before {
+  content: "\f005"; /* Star */
+}
+#eb .section_header#eb_section_header_1:before {
+  content: "\f079"; /* Retweet */
+}
+#eb .section_header#eb_section_header_2:before {
+  content: "\f112"; /* Reply */
+}
+#eb .section_header#eb_section_header_3:before {
+  content: "\f112"; /* Reply */
+}
+#eb .section_header#eb_section_header_4:before {
+  content: "\f0e0"; /* Envelope */
+}
+#eb .section_header#eb_section_header_5:before {
+  content: "\f1f8"; /* Trash */
+}
+#eb .section_header#eb_section_header_6:before {
+  content: "\f234"; /* User-Plus */
+}
+
 
 #eb .config_var {
   position: relative;
