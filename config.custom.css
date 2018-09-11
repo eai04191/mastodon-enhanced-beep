@@ -104,7 +104,7 @@
   height: 40px;
   visibility: hidden;
 }
-#eb .saveclose_buttons:after {
+#eb .saveclose_buttons::after {
   content: "💾 Save & Reload";
   visibility: visible;
   display: block;
@@ -118,6 +118,10 @@
   width: 200px;
   margin: auto;
   padding: 8px;
+  filter: grayscale(100%);
+}
+#eb .saveclose_buttons:hover::after {
+  filter: grayscale(0);
 }
 
 #eb_closeBtn,
