@@ -40,7 +40,7 @@ GM_config.init({
     },
     favouriteTestButton: {
       type: "button",
-      label: "🔈 Test",
+      label: "🔊 Test",
       click: function() {
         const sound = new Howl({
           src: GM_config.get("favouriteSource", true),
@@ -67,7 +67,7 @@ GM_config.init({
     },
     reblogTestButton: {
       type: "button",
-      label: "🔈 Test",
+      label: "🔊 Test",
       click: function() {
         const sound = new Howl({
           src: GM_config.get("reblogSource", true),
@@ -94,7 +94,7 @@ GM_config.init({
     },
     replyTestButton: {
       type: "button",
-      label: "🔈 Test",
+      label: "🔊 Test",
       click: function() {
         const sound = new Howl({
           src: GM_config.get("replySource", true),
@@ -121,7 +121,7 @@ GM_config.init({
     },
     privateTestButton: {
       type: "button",
-      label: "🔈 Test",
+      label: "🔊 Test",
       click: function() {
         const sound = new Howl({
           src: GM_config.get("privateSource", true),
@@ -148,7 +148,7 @@ GM_config.init({
     },
     directTestButton: {
       type: "button",
-      label: "🔈 Test",
+      label: "🔊 Test",
       click: function() {
         const sound = new Howl({
           src: GM_config.get("directSource", true),
@@ -175,7 +175,7 @@ GM_config.init({
     },
     deletedTestButton: {
       type: "button",
-      label: "🔈 Test",
+      label: "🔊 Test",
       click: function() {
         const sound = new Howl({
           src: GM_config.get("deletedSource", true),
@@ -202,7 +202,7 @@ GM_config.init({
     },
     followTestButton: {
       type: "button",
-      label: "🔈 Test",
+      label: "🔊 Test",
       click: function() {
         const sound = new Howl({
           src: GM_config.get("followSource", true),
