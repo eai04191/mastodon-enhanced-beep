@@ -6,6 +6,7 @@
 #eb #eb_wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 #eb #eb_header {
   width: 100%;
