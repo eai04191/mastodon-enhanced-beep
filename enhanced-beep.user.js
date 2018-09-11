@@ -184,7 +184,7 @@ GM_config.init({
         sound.play();
       }
     },
-    deletedaMemo: {
+    deletedMemo: {
       type: "text",
       label: "Memo",
       default: null
