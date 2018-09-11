@@ -184,7 +184,34 @@ GM_config.init({
         sound.play();
       }
     },
-    deletedeMemo: {
+    deletedaMemo: {
+      type: "text",
+      label: "Memo",
+      default: null
+    },
+    followSource: {
+      section: "Follow",
+      label: "Sound Source URL",
+      type: "text",
+      default: ""
+    },
+    followVolume: {
+      type: "unsigned float",
+      label: "Volume",
+      default: 0.5
+    },
+    followTestButton: {
+      type: "button",
+      label: "🔈 Test",
+      click: function() {
+        const sound = new Howl({
+          src: GM_config.get("followSource", true),
+          volume: GM_config.get("followVolume", true)
+        });
+        sound.play();
+      }
+    },
+    followMemo: {
       type: "text",
       label: "Memo",
       default: null
@@ -230,7 +257,6 @@ window.addEventListener(
     document.getElementById(
       "enhanced-beep-config"
     ).onclick = eventHandlerOpenConfig;
-    console.log(GM_getResourceText("config_css"));
     // const showLog = GM_config.get("showLog");
     const showLog = false;
 
@@ -257,7 +283,10 @@ window.addEventListener(
         const mutation = mutations[0];
         if (showLog) console.log(mutation);
 
-        if (mutation.removedNodes.length != 0) {
+        if (
+          mutation.removedNodes.length != 0 &&
+          mutation.removedNodes[0].attributes[0].value == 21 // Mastodon Web displays the notification of 20. 21 is not a deletion of the notification in the case disappeared.
+        ) {
           this.beep("deleted");
           return;
         }
@@ -277,6 +306,9 @@ window.addEventListener(
             case "notification-reblog":
               this.beep("reblog");
               break;
+            case "notification-follow":
+              this.beep("follow");
+              break;
             case "status__wrapper-private":
               this.beep("private");
               break;
@@ -287,6 +319,7 @@ window.addEventListener(
               this.beep("direct");
               break;
             default:
+              console.warn("Unexpected notification!");
               break;
           }
         }
