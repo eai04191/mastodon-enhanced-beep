@@ -274,10 +274,13 @@ GM_config.init({
   position: absolute;
   top: 9px;
   left: 0;
+  margin: 0;
+  font-weight: lighter;
   font-size: 16px;
   color: #9098a9;
   transform-origin: 0 0;
   transition: all 0.2s ease;
+  
 }
 #eb input[type="text"]:not(:placeholder-shown) + label {
   color: #5a667f;
