@@ -339,6 +339,9 @@ window.addEventListener(
             case "status__wrapper-direct":
               this.beep("direct");
               break;
+            case "fa-ellipsis-h": // Load more
+              // Do nothing.
+              break;
             default:
               console.warn("Unexpected notification!");
               break;
