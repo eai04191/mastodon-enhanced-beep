@@ -64,7 +64,6 @@
   content: "\f234"; /* User-Plus */
 }
 
-
 #eb .config_var {
   position: relative;
   width: 100%;
@@ -92,6 +91,7 @@
   color: #9098a9;
   transform-origin: 0 0;
   transition: all 0.2s ease;
+  user-select: none;
 }
 #eb input[type="text"]:not(:placeholder-shown) + label {
   color: #5a667f;
