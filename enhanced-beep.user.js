@@ -52,9 +52,9 @@ GM_config.init({
         }
       }
     },
-    favouriteMemo: {
+    favouriteNote: {
       type: "text",
-      label: "Memo",
+      label: "Note",
       default: null
     },
     reblogSource: {
@@ -82,9 +82,9 @@ GM_config.init({
         }
       }
     },
-    reblogMemo: {
+    reblogNote: {
       type: "text",
-      label: "Memo",
+      label: "Note",
       default: null
     },
     replySource: {
@@ -112,9 +112,9 @@ GM_config.init({
         }
       }
     },
-    replyMemo: {
+    replyNote: {
       type: "text",
-      label: "Memo",
+      label: "Note",
       default: null
     },
     privateSource: {
@@ -142,9 +142,9 @@ GM_config.init({
         }
       }
     },
-    privateMemo: {
+    privateNote: {
       type: "text",
-      label: "Memo",
+      label: "Note",
       default: null
     },
     directSource: {
@@ -172,9 +172,9 @@ GM_config.init({
         }
       }
     },
-    directMemo: {
+    directNote: {
       type: "text",
-      label: "Memo",
+      label: "Note",
       default: null
     },
     deletedSource: {
@@ -202,9 +202,9 @@ GM_config.init({
         }
       }
     },
-    deletedMemo: {
+    deletedNote: {
       type: "text",
-      label: "Memo",
+      label: "Note",
       default: null
     },
     followSource: {
@@ -232,9 +232,9 @@ GM_config.init({
         }
       }
     },
-    followMemo: {
+    followNote: {
       type: "text",
-      label: "Memo",
+      label: "Note",
       default: null
     }
   },
