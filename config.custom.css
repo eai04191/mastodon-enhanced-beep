@@ -12,6 +12,7 @@
   min-height: 115px;
   margin: 0 auto 10px;
   content: url(https://cldup.com/9iCOVswnCZ.svg);
+  animation: wipeIn 0.5s ease-in-out;
 }
 #eb .section_header_holder {
   display: flex;
@@ -127,4 +128,13 @@
 #eb_closeBtn,
 .reset_holder {
   display: none !important;
+}
+
+@keyframes wipeIn {
+  0% {
+    transform: translateY(calc(-100% - 20px));
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
