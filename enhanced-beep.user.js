@@ -4,7 +4,7 @@
 // @description  Beep Beep Another Beep!
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.1
+// @version      1.0.2
 // @icon         https://cldup.com/VTnT7b3u9i.png
 
 // @homepageURL  https://github.com/eai04191/mastodon-enhanced-beep
