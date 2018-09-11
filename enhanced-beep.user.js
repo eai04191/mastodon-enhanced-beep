@@ -327,11 +327,14 @@ window.addEventListener(
 
       beep(type) {
         if (showLog) console.log("Play Beep:", type);
-        const sound = new Howl({
-          src: GM_config.get(`${type}Source`),
-          volume: GM_config.get(`${type}Volume`) || 0.5
-        });
-        sound.play();
+        const source = GM_config.get(`${type}Source`);
+        if (source) {
+          const sound = new Howl({
+            src: source,
+            volume: GM_config.get(`${type}Volume`) || 0.5
+          });
+          sound.play();
+        }
       }
     }
 
