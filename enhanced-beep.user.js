@@ -330,6 +330,7 @@ window.addEventListener(
             case "notification-follow":
               this.beep("follow");
               break;
+            case "status__wrapper-unlisted":
             case "status__wrapper-private":
               this.beep("private");
               break;
@@ -344,6 +345,8 @@ window.addEventListener(
               break;
             default:
               console.warn("Unexpected notification!");
+              console.log("Element:", notificationElement);
+              console.log("Class:", notificationClassList);
               break;
           }
         }
