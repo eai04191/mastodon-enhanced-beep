@@ -306,7 +306,7 @@ window.addEventListener(
 
         if (
           mutation.removedNodes.length != 0 &&
-          mutation.removedNodes[0].attributes[0].value == 21 // Mastodon Web displays the notification of 20. 21 is not a deletion of the notification in the case disappeared.
+          mutation.removedNodes[0].attributes[0].value != 21 // Mastodon Web displays the notification of 20. 21 is not a deletion of the notification in the case disappeared.
         ) {
           this.beep("deleted");
           return;
