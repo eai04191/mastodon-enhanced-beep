@@ -29,10 +29,12 @@ Have you ever used userscript? If so, you can install by opening the [enhanced-b
 If you are new to using userscript, please install extensions first into the your browser.
 
 - Chrome: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-- Firefox: [Greasemonkey](https://addons.mozilla.org/ja/firefox/addon/greasemonkey/)
+- Firefox: [Tampermonkey](https://addons.mozilla.org/ja/firefox/addon/tampermonkey/)
 - Opera: [Tampermonkey](https://addons.opera.com/ja/extensions/details/tampermonkey-beta/)
 
 Userscript works with many browsers. If you are using a browser other than these please try searching for extensions.
+
+**Greasemonkey** has deleted the function of GM_getResourceText and can not execute this script. (And the new GM.getResourceUrl behaves strangely ...😢)
 
 Did you install the extension?
 It is time to install **Enhanced Beep!**! Open [enhanced-beep.user.js](https://github.com/eai04191/mastodon-enhanced-beep/raw/master/enhanced-beep.user.js) and press Install.
