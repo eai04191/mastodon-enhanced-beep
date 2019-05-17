@@ -138,7 +138,7 @@
   visibility: hidden;
 }
 #eb .saveclose_buttons::after {
-  content: "💾 Save & Reload";
+  content: "\1F4BE Save & Reload";
   visibility: visible;
   display: block;
   border: 1px solid #292f33;
