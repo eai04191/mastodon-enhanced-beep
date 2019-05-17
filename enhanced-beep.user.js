@@ -4,7 +4,7 @@
 // @description  Beep Beep Another Beep!
 // @author       Eai <eai@mizle.net>
 // @license      MIT
-// @version      1.0.3
+// @version      1.0.4
 // @icon         https://cldup.com/7zV-vUfafE.png
 
 // @homepageURL  https://github.com/eai04191/mastodon-enhanced-beep
@@ -12,7 +12,7 @@
 
 // @include      https://*/web/*
 
-// @require      https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.15/howler.min.js
+// @require      https://raw.githubusercontent.com/eai04191/userscript-graveyard/master/userscript/lib/player.js
 // @require      https://cdn.rawgit.com/arantius/3123124/raw/1866c6780e1946f657f688537b199e0102ccd19c/grant-none-shim.js
 // @require      https://openuserjs.org/src/libs/sizzle/GM_config.js
 
@@ -42,14 +42,7 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const source = GM_config.get("favouriteSource", true);
-        if (source) {
-          const sound = new Howl({
-            src: source,
-            volume: GM_config.get("favouriteVolume", true)
-          });
-          sound.play();
-        }
+        player.play(GM_config.get("favouriteSource", true),{volume: GM_config.get("favouriteVolume", true)});
       }
     },
     favouriteNote: {
@@ -72,14 +65,7 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const source = GM_config.get("reblogSource", true);
-        if (source) {
-          const sound = new Howl({
-            src: source,
-            volume: GM_config.get("reblogVolume", true)
-          });
-          sound.play();
-        }
+        player.play(GM_config.get("reblogSource", true),{volume: GM_config.get("reblogVolume", true)});
       }
     },
     reblogNote: {
@@ -102,14 +88,7 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const source = GM_config.get("replySource", true);
-        if (source) {
-          const sound = new Howl({
-            src: source,
-            volume: GM_config.get("replyVolume", true)
-          });
-          sound.play();
-        }
+        player.play(GM_config.get("replySource", true),{volume: GM_config.get("replyVolume", true)});
       }
     },
     replyNote: {
@@ -132,14 +111,7 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const source = GM_config.get("privateSource", true);
-        if (source) {
-          const sound = new Howl({
-            src: source,
-            volume: GM_config.get("privateVolume", true)
-          });
-          sound.play();
-        }
+        player.play(GM_config.get("privateSource", true),{volume: GM_config.get("privateVolume", true)});
       }
     },
     privateNote: {
@@ -162,14 +134,7 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const source = GM_config.get("directSource", true);
-        if (source) {
-          const sound = new Howl({
-            src: source,
-            volume: GM_config.get("directVolume", true)
-          });
-          sound.play();
-        }
+        player.play(GM_config.get("directSource", true),{volume: GM_config.get("directVolume", true)});
       }
     },
     directNote: {
@@ -192,14 +157,7 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const source = GM_config.get("deletedSource", true);
-        if (source) {
-          const sound = new Howl({
-            src: source,
-            volume: GM_config.get("deletedVolume", true)
-          });
-          sound.play();
-        }
+        player.play(GM_config.get("deletedSource", true),{volume: GM_config.get("deletedVolume", true)});
       }
     },
     deletedNote: {
@@ -222,14 +180,7 @@ GM_config.init({
       type: "button",
       label: "🔊 Test",
       click: function() {
-        const source = GM_config.get("followSource", true);
-        if (source) {
-          const sound = new Howl({
-            src: source,
-            volume: GM_config.get("followVolume", true)
-          });
-          sound.play();
-        }
+        player.play(GM_config.get("followSource", true),{volume: GM_config.get("followVolume", true)});
       }
     },
     followNote: {
@@ -356,11 +307,7 @@ window.addEventListener(
         if (showLog) console.log("Play Beep:", type);
         const source = GM_config.get(`${type}Source`);
         if (source) {
-          const sound = new Howl({
-            src: source,
-            volume: GM_config.get(`${type}Volume`) || 0.5
-          });
-          sound.play();
+          player.play(source,{volume: GM_config.get(`${type}Volume`) || 0.5});
         }
       }
     }
