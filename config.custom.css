@@ -58,9 +58,12 @@
   content: "\f0e0"; /* Envelope */
 }
 #eb .section_header#eb_section_header_5:before {
-  content: "\f1f8"; /* Trash */
+  content: "\f0ae"; /* Tasks */
 }
 #eb .section_header#eb_section_header_6:before {
+  content: "\f1f8"; /* Trash */
+}
+#eb .section_header#eb_section_header_7:before {
   content: "\f234"; /* User-Plus */
 }
 

@@ -142,6 +142,29 @@ GM_config.init({
             label: "Note",
             default: null
         },
+        pollSource: {
+            section: "Poll",
+            label: "Sound Source URL",
+            type: "text",
+            default: ""
+        },
+        pollVolume: {
+            type: "unsigned float",
+            label: "Volume",
+            default: 0.5
+        },
+        pollTestButton: {
+            type: "button",
+            label: "🔊 Test",
+            click: function() {
+                player.play(GM_config.get("pollSource", true), { volume: GM_config.get("pollVolume", true) });
+            }
+        },
+        pollNote: {
+            type: "text",
+            label: "Note",
+            default: null
+        },
         deletedSource: {
             section: "Notification Deleted",
             label: "Sound Source URL",
@@ -269,6 +292,9 @@ window.addEventListener(
                             break;
                         case "notification-follow":
                             this.beep("follow");
+                            break;
+                        case "notification-poll":
+                            this.beep("poll");
                             break;
                         case "status__wrapper-unlisted":
                         case "status__wrapper-private":
