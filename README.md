@@ -17,6 +17,7 @@ Currently Supported type of notification:
 - Reply
 - Reply (Private)
 - Direct
+- Poll
 - Follow
 - Notification Deleted
     - Yes, you do not need to be confused anymore Reply is Deleted.
