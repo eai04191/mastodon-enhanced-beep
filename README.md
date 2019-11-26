@@ -19,40 +19,39 @@ Currently Supported type of notification:
 - Direct
 - Poll
 - Follow
-- Notification Deleted
-    - Yes, you do not need to be confused anymore Reply is Deleted.
 
 
 ## Install
 
 Have you ever used userscript? If so, you can install by opening the [enhanced-beep.user.js](https://github.com/eai04191/mastodon-enhanced-beep/raw/master/enhanced-beep.user.js).
 
-If you are new to using userscript, please install extensions first into the your browser.
+If you are new to using userscript, please install userscript extensions first into the your browser. I recommend Violentmonkey for use.
 
-- Chrome: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-- Firefox: [Tampermonkey](https://addons.mozilla.org/ja/firefox/addon/tampermonkey/)
-- Opera: [Tampermonkey](https://addons.opera.com/ja/extensions/details/tampermonkey-beta/)
+- Chrome / Opera: [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
+- Firefox: [Violentmonkey](https://addons.mozilla.org/firefox/addon/violentmonkey/)
 
 Userscript works with many browsers. If you are using a browser other than these please try searching for extensions.
 
 **Greasemonkey** has deleted the function of GM_getResourceText and can not execute this script. (And the new GM.getResourceUrl behaves strangely ...😢)
 
-Did you install the extension?
-It is time to install **Enhanced Beep!**! Open [enhanced-beep.user.js](https://github.com/eai04191/mastodon-enhanced-beep/raw/master/enhanced-beep.user.js) and press Install.
+Did you install the extension? It is time to install **Enhanced Beep!**!
+
+Open [enhanced-beep.user.js](https://github.com/eai04191/mastodon-enhanced-beep/raw/master/enhanced-beep.user.js) and press Install.
 
 
 ## Usage
 
-If the **Enhanced Beep!** is installed correctly, there should be an **Enhanced Beep!** icon in the notification column title.
+If the **Enhanced Beep!** is installed correctly, there should be an **Enhanced Beep!** icon in the notification column title in your Mastodon Web UI.
 
 ![screenshot](https://cldup.com/KJ-RJ7zPSp.png)
 
-If it is not displayed, please reload the page.
+If it is not displayed, Make sure the notification column is pinned and refresh the page.
+
 Also, **Enhanced Beep!** is not working when the icon is not displayed. If you want to receive your notification sound, please confirm that it is working.
 
 Click the icon to open the Setting screen.
 
-![Enhanced Beep! Setting Screen](https://i.imgur.com/rYK9PoF.png)
+![Enhanced Beep! Setting Screen](https://i.imgur.com/7yrWqKu.png)
 
 Enter the URL of the sound file to be sounded in the `Sound Source URL` and try pressing the `🔊 Test` button. If the sound is heard, it will be successful!
 
